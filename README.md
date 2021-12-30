@@ -1,15 +1,11 @@
-  <h3 align="center">Kezako Plant</h3>
-  <p align="center">
-    Kezako Plant : I will find what plant you are :) !
-    <br />
-    <a href="https://github.com/AlexARNcode/kezako-plant-react/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/AlexARNcode/kezako-plant-react/issues">Request Feature</a>
-  </p>
-</div>
-
+<h1 align="center">:four_leaf_clover: Kezako Plant</h1>
+<h3 align="center">I will find what plant you are :)!</h3>   
+<br/>
+<br/>
 
 ![kezako](https://user-images.githubusercontent.com/53975649/147794292-2c96d92c-1443-4f4a-981c-4eaa5435ed52.gif)
+
+
 
 ## About The Project
 
