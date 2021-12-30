@@ -2,8 +2,8 @@ import React from "react";
 
 export default function ResultCard(props) {
   return (
-    <div className="card">
-      <div class="card-header">
+    <div className="card border-info mb-3">
+      <div className="card-header">
         <h5 className="card-title">{props.number}</h5>
       </div>
       <div className="card-body">
