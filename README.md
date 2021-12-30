@@ -8,6 +8,9 @@
   </p>
 </div>
 
+
+![kezako](https://user-images.githubusercontent.com/53975649/147794292-2c96d92c-1443-4f4a-981c-4eaa5435ed52.gif)
+
 ## About The Project
 
 Kezako Plant is a web application which aims to one simple goal : Find what is the plant contained in an image file.
@@ -15,10 +18,6 @@ Kezako Plant is a web application which aims to one simple goal : Find what is t
 It will display several possibilities with a score for each one.
 
 Each possibility will have a scientific name and more common names.
-
-## Demo
-
-https://user-images.githubusercontent.com/53975649/147768127-83bb2407-a0ef-4e4f-976d-607354c46720.mp4
 
 ### Built With
 
