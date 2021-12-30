@@ -14,35 +14,39 @@ export default function Form() {
     setOrgan(e.target.value);
   };
 
-  const showNoOrganError = () => {
-    alert("You must choose an organ !");
+  const showChooseError = () => {
+    alert("You must choose an organ AND a file");
+  };
+
+  const callPlantNetApi = () => {
+    const dataArray = new FormData();
+    dataArray.append("images", uploadFile);
+    dataArray.append("organs", organ);
+    axios
+      .post(
+        "https://my-api.plantnet.org/v2/identify/all?api-key=2b101KupCBLezl8pN3AH8oUg",
+        dataArray,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      )
+      .then((response) => {
+        console.log(response.data.results[0].species.commonNames[0]);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   const submitForm = (event) => {
-    if (organ) {
+    if (!organ || !uploadFile) {
       event.preventDefault();
-
-      const dataArray = new FormData();
-      dataArray.append("images", uploadFile);
-      dataArray.append("organs", organ);
-      axios
-        .post(
-          "https://my-api.plantnet.org/v2/identify/all?api-key=2b101KupCBLezl8pN3AH8oUg",
-          dataArray,
-          {
-            headers: {
-              "Content-Type": "multipart/form-data",
-            },
-          }
-        )
-        .then((response) => {
-          console.log(response.data.results[0].species.commonNames[0]);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+      showChooseError();
     } else {
-      showNoOrganError();
+      event.preventDefault();
+      callPlantNetApi();
     }
   };
 
