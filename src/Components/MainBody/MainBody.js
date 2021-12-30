@@ -1,9 +1,9 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
-import ResultCard from "../ResultCard/ResultCard";
+import Results from "../Results/Results";
 
-export default function MainForm() {
+export default function MainBody() {
   const [uploadFile, setUploadFile] = useState();
   const [organ, setOrgan] = useState();
   const [results, setResults] = useState([{}]);
@@ -67,22 +67,8 @@ export default function MainForm() {
           type="file"
           className="form-control mb-3"
         />
-        <button className="btn btn-primary mb-3 w-100">Send</button>
-
-        {results[1] && <h2>Résultats</h2>}
-        {results[1] &&
-          results[1].map((result, i) => {
-            return (
-              <>
-                <ResultCard
-                  score={result.score}
-                  scientificName={result.species.scientificName}
-                  commonNames={result.species.commonNames}
-                  number={i + 1}
-                />
-              </>
-            );
-          })}
+        <button className="btn btn-info mb-3 w-100">Send</button>
+        <Results results={results} />
       </form>
     </>
   );
