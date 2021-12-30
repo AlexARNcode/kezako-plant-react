@@ -1,17 +1,14 @@
-  <h3 align="center">kezako Plant</h3>
+  <h3 align="center">Kezako Plant</h3>
 
   <p align="center">
     Kezako Plant : I will find what plant you are :) !
     <br />
-    <a href="#">View Demo</a>
-    ·
     <a href="https://github.com/AlexARNcode/kezako-plant-react/issues">Report Bug</a>
     ·
     <a href="https://github.com/AlexARNcode/kezako-plant-react/issues">Request Feature</a>
   </p>
 </div>
 
-<!-- ABOUT THE PROJECT -->
 
 ## About The Project
 
@@ -21,13 +18,18 @@ It will display several possibilities with a score for each one.
 
 Each possibility will have a scientific name and more common names.
 
+## Demo
+
+
+https://user-images.githubusercontent.com/53975649/147768127-83bb2407-a0ef-4e4f-976d-607354c46720.mp4
+
+
 ### Built With
 
 - [React.js](https://reactjs.org/)
 - [PlantNet API](https://my.plantnet.org/)
 - [Bootstrap](https://getbootstrap.com)
 
-<!-- GETTING STARTED -->
 
 ## Getting Started
 
