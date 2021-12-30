@@ -3,7 +3,7 @@ import { useState } from "react";
 import axios from "axios";
 import ResultCard from "../ResultCard/ResultCard";
 
-export default function Form() {
+export default function MainForm() {
   const [uploadFile, setUploadFile] = useState();
   const [organ, setOrgan] = useState();
   const [results, setResults] = useState([{}]);
