@@ -1,10 +1,12 @@
 import React from "react";
 import { useState } from "react";
 import axios from "axios";
+import ResultCard from "../ResultCard/ResultCard";
 
 export default function Form() {
   const [uploadFile, setUploadFile] = useState();
   const [organ, setOrgan] = useState();
+  const [results, setResults] = useState([{}]);
 
   const handleFileSelect = (e) => {
     setUploadFile(e.target.files[0]);
@@ -33,7 +35,7 @@ export default function Form() {
         }
       )
       .then((response) => {
-        console.log(response.data.results[0].species.commonNames[0]);
+        setResults([...results, response.data.results]);
       })
       .catch((error) => {
         console.log(error);
@@ -50,6 +52,11 @@ export default function Form() {
     }
   };
 
+  const showResults = () => {
+    console.log(results);
+    console.log(uploadFile);
+  };
+
   return (
     <>
       <form onSubmit={submitForm}>
@@ -60,11 +67,25 @@ export default function Form() {
           <option value="fruit">Fruit</option>
           <option value="bark">Bark</option>
         </select>
-
         <input onChange={handleFileSelect} type="file" />
-
         <button>Send</button>
+        <h2>Résultats</h2>
+        {results[1] &&
+          results[1].map((result, i) => {
+            return (
+              <>
+                <ResultCard
+                  score={result.score}
+                  scientificName={result.species.scientificName}
+                  commonNames={result.species.commonNames}
+                  number={i + 1}
+                />
+              </>
+            );
+          })}
       </form>
+
+      <button onClick={showResults}>Show Results</button>
     </>
   );
 }
