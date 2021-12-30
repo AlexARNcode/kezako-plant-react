@@ -51,6 +51,10 @@ export default function MainBody() {
       callPlantNetApi();
     }
   };
+  /* 
+  const showResults = (e) => {
+    console.log(results[1]);
+  }; */
 
   return (
     <>
@@ -70,6 +74,10 @@ export default function MainBody() {
         <button className="btn btn-info mb-3 w-100">Send</button>
         <Results results={results} />
       </form>
+
+      {/*    <button className="btn btn-info mb-3 w-100" onClick={showResults}>
+        Results
+      </button> */}
     </>
   );
 }
