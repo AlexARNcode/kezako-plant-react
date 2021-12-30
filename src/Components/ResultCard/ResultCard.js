@@ -9,9 +9,15 @@ export default function ResultCard(props) {
       <div className="card-body">
         <p className="card-text">Score : {props.score}</p>
         <p className="card-text">Scientific Name : {props.scientificName}</p>
-        <p className="card-text">
-          Common Names : {props.commonNames.join(", ")}
-        </p>
+        {props.commonNames.length !== 0 ? (
+          <p className="card-text">
+            Common Names : {props.commonNames.join(", ")}
+          </p>
+        ) : (
+          <p className="card-text">
+            Common Names : <span className="text-muted">Not found</span>
+          </p>
+        )}
       </div>
     </div>
   );
