@@ -52,24 +52,24 @@ export default function MainForm() {
     }
   };
 
-  const showResults = () => {
-    console.log(results);
-    console.log(uploadFile);
-  };
-
   return (
     <>
       <form onSubmit={submitForm}>
-        <select onChange={chooseOrgan} id="organ">
+        <select onChange={chooseOrgan} id="organ" className="form-select mb-3">
           <option value="">--Choose an organ--</option>
           <option value="leaf">Leaf</option>
           <option value="flower">Flower</option>
           <option value="fruit">Fruit</option>
           <option value="bark">Bark</option>
         </select>
-        <input onChange={handleFileSelect} type="file" />
-        <button>Send</button>
-        <h2>Résultats</h2>
+        <input
+          onChange={handleFileSelect}
+          type="file"
+          className="form-control mb-3"
+        />
+        <button className="btn btn-primary mb-3 w-100">Send</button>
+
+        {results[1] && <h2>Résultats</h2>}
         {results[1] &&
           results[1].map((result, i) => {
             return (
@@ -84,8 +84,6 @@ export default function MainForm() {
             );
           })}
       </form>
-
-      <button onClick={showResults}>Show Results</button>
     </>
   );
 }

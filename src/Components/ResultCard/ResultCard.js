@@ -2,11 +2,17 @@ import React from "react";
 
 export default function ResultCard(props) {
   return (
-    <div>
-      <p>{props.number}</p>
-      <p>Score : {props.score}</p>
-      <p>Scientific Name : {props.scientificName}</p>
-      <p>Common Names : {props.commonNames.join(", ")}</p>
+    <div className="card">
+      <div class="card-header">
+        <h5 className="card-title">{props.number}</h5>
+      </div>
+      <div className="card-body">
+        <p className="card-text">Score : {props.score}</p>
+        <p className="card-text">Scientific Name : {props.scientificName}</p>
+        <p className="card-text">
+          Common Names : {props.commonNames.join(", ")}
+        </p>
+      </div>
     </div>
   );
 }
