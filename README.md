@@ -2,9 +2,9 @@
 <h3 align="center">I will find what plant you are :)!</h3>   
 <br/>
 <br/>
-
-![kezako](https://user-images.githubusercontent.com/53975649/147794292-2c96d92c-1443-4f4a-981c-4eaa5435ed52.gif)
-
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/53975649/147794292-2c96d92c-1443-4f4a-981c-4eaa5435ed52.gif"/>
+</p>
 
 
 ## About The Project
