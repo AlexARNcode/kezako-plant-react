@@ -24,8 +24,9 @@ Each possibility will have a scientific name and more common names.
 ### Prerequisites
 
 You need to have an account on PlantNet API to get a token.
+You will insert this token in `config/config.js` (see below).
 
-## Getting Started
+## How to make it work locally
 
 1. Clone this repository.
 2. Go to the project directory.
@@ -33,9 +34,9 @@ You need to have an account on PlantNet API to get a token.
 4. Rename `config/config.dist` to `config/config.js`
 5. Open `config/config.js`
 6. Modify `const PLANTNET_API_KEY = "Enter your PlantNet API key here"` with your token.
+7. Install "Allow CORS" extension for Firefox or Chrome : https://addons.mozilla.org/fr/firefox/addon/access-control-allow-origin/
 7. Launch a local web server (`npm start`).
 8. :sunglasses: Enjoy !
-
 
 ## Usage
 
