@@ -1,8 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import App from "./App";
-import "bootstrap/dist/css/bootstrap-sketchy.min.css"
+import "./assets/css/bootstrap-sketchy.min.css"
 
 ReactDOM.render(
   <React.StrictMode>
