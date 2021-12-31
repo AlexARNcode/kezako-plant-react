@@ -20,12 +20,6 @@ It will display several possibilities with a score for each one.
 
 Each possibility will have a scientific name and more common names.
 
-### Built With
-
-- [React.js](https://reactjs.org/)
-- [PlantNet API](https://my.plantnet.org/)
-- [Bootstrap](https://getbootstrap.com)
-
 ### Prerequisites
 
 1. You need to have an account on PlantNet API to get a token. You will insert this token in `config/config.js` (see below).
