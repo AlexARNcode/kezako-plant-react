@@ -2,9 +2,9 @@
 <h3 align="center">I will find what plant you are :)!</h3>   
 <br/>
 <br/>
-
-![kezako](https://user-images.githubusercontent.com/53975649/147794292-2c96d92c-1443-4f4a-981c-4eaa5435ed52.gif)
-
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/53975649/147794292-2c96d92c-1443-4f4a-981c-4eaa5435ed52.gif"/>
+</p>
 
 
 ## About The Project
@@ -26,16 +26,17 @@ Each possibility will have a scientific name and more common names.
 You need to have an account on PlantNet API to get a token.
 You will insert this token in `config/config.js` (see below).
 
-## Getting Started
+## How to make it work locally
 
 1. Clone this repository.
 2. Go to the project directory.
-3. Copy `config/config.dist` and rename it to `config/config.js`
-3. Open `config/config.js`
-4. Modify `const PLANTNET_API_KEY = "Enter your PlantNet API key here"` with your token in `config/config.js`
-5. Launch a local web server (`npm start`).
-6. :sunglasses: Enjoy !
-
+3. `npm install` to install necessary libraries
+4. Rename `config/config.dist` to `config/config.js`
+5. Open `config/config.js`
+6. Modify `const PLANTNET_API_KEY = "Enter your PlantNet API key here"` with your token.
+7. Install "Allow CORS" extension for Firefox or Chrome : https://addons.mozilla.org/fr/firefox/addon/access-control-allow-origin/
+7. Launch a local web server (`npm start`).
+8. :sunglasses: Enjoy !
 
 ## Usage
 
