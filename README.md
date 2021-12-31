@@ -3,9 +3,14 @@
 <br/>
 <br/>
 <p align="center">
-  <img src="https://user-images.githubusercontent.com/53975649/147794292-2c96d92c-1443-4f4a-981c-4eaa5435ed52.gif"/>
+  <img src="https://user-images.githubusercontent.com/53975649/147817942-24a810d9-ce02-43f8-b558-5f6b18d5f8e2.gif" />
 </p>
 
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
 ## About The Project
 
@@ -15,16 +20,10 @@ It will display several possibilities with a score for each one.
 
 Each possibility will have a scientific name and more common names.
 
-### Built With
-
-- [React.js](https://reactjs.org/)
-- [PlantNet API](https://my.plantnet.org/)
-- [Bootstrap](https://getbootstrap.com)
-
 ### Prerequisites
 
-You need to have an account on PlantNet API to get a token.
-You will insert this token in `config/config.js` (see below).
+1. You need to have an account on PlantNet API to get a token. You will insert this token in `config/config.js` (see below).
+2. You need to have Node and NPM installed locally.
 
 ## How to make it work locally
 

@@ -1,4 +1,3 @@
-import "./App.css";
 import MainBody from "./Components/MainBody/MainBody";
 import Header from "./Components/Header/Header";
 
