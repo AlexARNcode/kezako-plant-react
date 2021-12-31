@@ -29,10 +29,12 @@ You need to have an account on PlantNet API to get a token.
 
 1. Clone this repository.
 2. Go to the project directory.
-3. Open `config/config.js`
-4. Modify `const PLANTNET_API_KEY = "Enter your PlantNet API key here"` with your token.
-5. Launch a local web server (`npm start`).
-6. :sunglasses: Enjoy !
+3. `npm install` to install necessary libraries
+4. Rename `config/config.dist` to `config/config.js`
+5. Open `config/config.js`
+6. Modify `const PLANTNET_API_KEY = "Enter your PlantNet API key here"` with your token.
+7. Launch a local web server (`npm start`).
+8. :sunglasses: Enjoy !
 
 
 ## Usage
