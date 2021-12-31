@@ -23,8 +23,8 @@ Each possibility will have a scientific name and more common names.
 
 ### Prerequisites
 
-You need to have an account on PlantNet API to get a token.
-You will insert this token in `config/config.js` (see below).
+1. You need to have an account on PlantNet API to get a token. You will insert this token in `config/config.js` (see below).
+2. You need to have Node and NPM installed locally.
 
 ## How to make it work locally
 
