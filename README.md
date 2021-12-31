@@ -24,13 +24,15 @@ Each possibility will have a scientific name and more common names.
 ### Prerequisites
 
 You need to have an account on PlantNet API to get a token.
+You will insert this token in `config/config.js` (see below).
 
 ## Getting Started
 
 1. Clone this repository.
 2. Go to the project directory.
+3. Copy `config/config.dist` and rename it to `config/config.js`
 3. Open `config/config.js`
-4. Modify `const PLANTNET_API_KEY = "Enter your PlantNet API key here"` with your token.
+4. Modify `const PLANTNET_API_KEY = "Enter your PlantNet API key here"` with your token in `config/config.js`
 5. Launch a local web server (`npm start`).
 6. :sunglasses: Enjoy !
 
