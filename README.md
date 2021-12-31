@@ -1,12 +1,11 @@
-  <h3 align="center">Kezako Plant</h3>
-  <p align="center">
-    Kezako Plant : I will find what plant you are :) !
-    <br />
-    <a href="https://github.com/AlexARNcode/kezako-plant-react/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/AlexARNcode/kezako-plant-react/issues">Request Feature</a>
-  </p>
-</div>
+<h1 align="center">:four_leaf_clover: Kezako Plant</h1>
+<h3 align="center">I will find what plant you are :)!</h3>   
+<br/>
+<br/>
+
+![kezako](https://user-images.githubusercontent.com/53975649/147794292-2c96d92c-1443-4f4a-981c-4eaa5435ed52.gif)
+
+
 
 ## About The Project
 
@@ -15,10 +14,6 @@ Kezako Plant is a web application which aims to one simple goal : Find what is t
 It will display several possibilities with a score for each one.
 
 Each possibility will have a scientific name and more common names.
-
-## Demo
-
-https://user-images.githubusercontent.com/53975649/147768127-83bb2407-a0ef-4e4f-976d-607354c46720.mp4
 
 ### Built With
 
@@ -29,14 +24,18 @@ https://user-images.githubusercontent.com/53975649/147768127-83bb2407-a0ef-4e4f-
 ### Prerequisites
 
 You need to have an account on PlantNet API to get a token.
+You will insert this token in `config/config.js` (see below).
 
 ## Getting Started
 
-1. Pull this repository.
+1. Clone this repository.
 2. Go to the project directory.
-3. Modify the PlantNet API token with your account's token, here:  
-   `const PLANTNET_API_KEY = "Enter your PlantNet API key here"` in `config/config.js`
-4. Launch a local web server (`npm start`).
+3. Copy `config/config.dist` and rename it to `config/config.js`
+3. Open `config/config.js`
+4. Modify `const PLANTNET_API_KEY = "Enter your PlantNet API key here"` with your token in `config/config.js`
+5. Launch a local web server (`npm start`).
+6. :sunglasses: Enjoy !
+
 
 ## Usage
 

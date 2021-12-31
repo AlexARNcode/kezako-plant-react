@@ -27,7 +27,7 @@ export default function MainBody() {
     dataArray.append("organs", organ);
     axios
       .post(
-        "https://my-api.plantnet.org/v2/identify/all?api-key=2b101KupCBLezl8pN3AH8oUg",
+        `https://my-api.plantnet.org/v2/identify/all?api-key=${PLANTNET_API_KEY}`,
         dataArray,
         {
           headers: {
