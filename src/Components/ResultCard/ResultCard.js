@@ -7,7 +7,7 @@ export default function ResultCard(props) {
         <h5 className="card-title">{props.number}</h5>
       </div>
       <div className="card-body">
-        <p className="card-text">Score : {props.score}</p>
+        <p className="card-text">Score : {props.score} %</p>
         <p className="card-text">Scientific Name : {props.scientificName}</p>
         {props.commonNames.length !== 0 ? (
           <p className="card-text">

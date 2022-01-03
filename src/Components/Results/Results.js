@@ -10,7 +10,7 @@ export default function Results(props) {
           return (
             <>
               <ResultCard
-                score={result.score}
+                score={Math.round(result.score * 100)}
                 scientificName={result.species.scientificName}
                 commonNames={result.species.commonNames}
                 number={i + 1}
