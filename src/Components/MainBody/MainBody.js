@@ -73,6 +73,7 @@ export default function MainBody() {
           className="form-control mb-3"
         />
         <button className="btn btn-info mb-3 w-100">Send</button>
+        {results[1] && <h2 className="text-center mt-4 mb-3">Results</h2>}
         <Results results={results} />
       </form>
 
