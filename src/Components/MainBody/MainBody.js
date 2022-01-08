@@ -10,7 +10,22 @@ export default function MainBody() {
   const [results, setResults] = useState([{}]);
 
   const handleFileSelect = (e) => {
-    setUploadFile(e.target.files[0]);
+    if (fileIsAnImage(e.target.files[0].type)) {
+      setUploadFile(e.target.files[0]);
+    } else {
+      setUploadFile("");
+      document.getElementById("fileUploader").value = "";
+      alert("Please choose an image file!");
+    }
+  };
+
+  const imageFileTypes = ["image/jpeg", "image/gif", "image/png"];
+
+  const fileIsAnImage = (fileType) => {
+    if (!imageFileTypes.includes(fileType)) {
+      return false;
+    }
+    return true;
   };
 
   const chooseOrgan = (e) => {
@@ -68,9 +83,11 @@ export default function MainBody() {
           <option value="bark">Bark</option>
         </select>
         <input
+          id="fileUploader"
           onChange={handleFileSelect}
           type="file"
           className="form-control mb-3"
+          accept="image/jpeg, image/gif, image/png"
         />
         <button className="btn btn-info mb-3 w-100">Send</button>
         {results[1] && <h2 className="text-center mt-4 mb-3">Results</h2>}
