@@ -8,6 +8,7 @@ export default function MainBody() {
   const [uploadFile, setUploadFile] = useState();
   const [organ, setOrgan] = useState();
   const [results, setResults] = useState([{}]);
+  const [error, setError] = useState();
 
   const handleFileSelect = (e) => {
     if (fileIsAnImage(e.target.files[0].type)) {
@@ -54,7 +55,10 @@ export default function MainBody() {
         setResults([...results, response.data.results]);
       })
       .catch((error) => {
-        console.log(error);
+        setError(
+          "There is an error. Please check you uploaded a real image file and that you internet connection is up."
+        );
+        setResults([{}]);
       });
   };
 
@@ -64,13 +68,10 @@ export default function MainBody() {
       showChooseError();
     } else {
       event.preventDefault();
+      setError(null);
       callPlantNetApi();
     }
   };
-  /* 
-  const showResults = (e) => {
-    console.log(results[1]);
-  }; */
 
   return (
     <>
@@ -90,13 +91,14 @@ export default function MainBody() {
           accept="image/jpeg, image/gif, image/png"
         />
         <button className="btn btn-info mb-3 w-100">Send</button>
+
+        {error && (
+          <div className="alert alert-dismissible alert-danger">{error}</div>
+        )}
+
         {results[1] && <h2 className="text-center mt-4 mb-3">Results</h2>}
         <Results results={results} />
       </form>
-
-      {/*    <button className="btn btn-info mb-3 w-100" onClick={showResults}>
-        Results
-      </button> */}
     </>
   );
 }
