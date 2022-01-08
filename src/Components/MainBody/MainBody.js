@@ -9,6 +9,7 @@ export default function MainBody() {
   const [organ, setOrgan] = useState();
   const [results, setResults] = useState([{}]);
   const [error, setError] = useState();
+  const [loader, setLoader] = useState();
 
   const handleFileSelect = (e) => {
     if (fileIsAnImage(e.target.files[0].type)) {
@@ -38,6 +39,7 @@ export default function MainBody() {
   };
 
   const callPlantNetApi = () => {
+    setLoader(true);
     const dataArray = new FormData();
     dataArray.append("images", uploadFile);
     dataArray.append("organs", organ);
@@ -52,9 +54,11 @@ export default function MainBody() {
         }
       )
       .then((response) => {
+        setLoader();
         setResults([...results, response.data.results]);
       })
       .catch((error) => {
+        setLoader();
         setError(
           "There is an error. Please check you uploaded a real image file and that you internet connection is up."
         );
@@ -91,6 +95,13 @@ export default function MainBody() {
           accept="image/jpeg, image/gif, image/png"
         />
         <button className="btn btn-info mb-3 w-100">Send</button>
+
+        {loader && (
+          <>
+            <div className="spinner-border text-secondary" role="status"></div>
+            <p>Loading...</p>
+          </>
+        )}
 
         {error && (
           <div className="alert alert-dismissible alert-danger">{error}</div>
